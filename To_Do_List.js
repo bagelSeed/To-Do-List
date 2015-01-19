@@ -18,12 +18,12 @@ function doneTaskOnList() {
 }
 
 $(function (){
-	$(document).on('click', "#addTask", addTaskOnList);
-	$(document).on('click', ".removeTask", removeTaskOnList);
-	$(document).on('click', ".completed", doneTaskOnList);
+	$(document).on('mousedown', "#addTask", addTaskOnList);
+	$(document).on('mousedown', ".removeTask", removeTaskOnList);
+	$(document).on('mousedown', ".completed", doneTaskOnList);
 	$("#newJobs").keyup(function(event){
 		if(event.keyCode == 13){
-			$("#addTask").click();
+			$("#addTask").mousedown();
 		}
 	});
 });
